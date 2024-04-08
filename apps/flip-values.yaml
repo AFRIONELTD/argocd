@@ -1,0 +1,19 @@
+name: afrione-app
+project: afrione-ip
+namespace: afrione
+values: |-
+  fullnameOverride: afrione-app
+  image: 
+    repository: AFRIONELTD/afrione-ip:app-1
+  namespace: afrione
+  containerPort: 3000
+  managedidentity:
+      enabled: true
+  autoscaling:
+      enabled: true
+  ingress:
+    enabled: true
+  lProbe:
+      enabled: false
+  rProbe:
+      enabled: false
