@@ -1,11 +1,11 @@
-name: afrione-app
-project: afrione-ip
-namespace: afrione
+name: flip-app
+project: flip-ip
+namespace: flip
 values: |-
-  fullnameOverride: afrione-app
+  fullnameOverride: flip-app
   image: 
-    repository: AFRIONELTD/afrione-ip:app-1
-  namespace: afrione
+    repository: daviinaa/flip-ip:app-36
+  namespace: flip
   containerPort: 3000
   managedidentity:
       enabled: true
