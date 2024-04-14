@@ -10,7 +10,7 @@ spec:
       repoURL: https://github.com/AFRIONELTD/argocd.git
       revision: main
       files:
-      - path: "argocd/apps/"
+      - path: "apps/"
   template:
     metadata:
       name: '{{name}}'
