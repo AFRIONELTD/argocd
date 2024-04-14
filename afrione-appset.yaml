@@ -24,7 +24,7 @@ spec:
           values: |-
             {{values}}
       destination:
-        name: afrione
+        name: arn:aws:eks:eu-west-2:540781878727:cluster/AFRIONE
         namespace: '{{namespace}}'
       
       syncPolicy:
