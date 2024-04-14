@@ -4,7 +4,7 @@ namespace: siji
 values: |-
   fullnameOverride: siji-app
   image: 
-    repository: sijibomi21/siji-image:app-6
+    repository: sijibomi21/siji-image:app-7
   namespace: siji
   containerPort: 3000
   managedidentity:
