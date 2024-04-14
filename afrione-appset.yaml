@@ -2,12 +2,12 @@
 apiVersion: argoproj.io/v1alpha1
 kind: ApplicationSet
 metadata:
-  name: afrione-appset
+  name: flip-appset
   namespace: argocd
 spec:
   generators:
   - git:
-      repoURL: https://github.com/AFRIONELTD/argocd.git
+      repoURL: https://github.com/daviinaa/argocd-manifests.git
       revision: main
       files:
       - path: "argocd/apps/"
@@ -17,14 +17,14 @@ spec:
     spec:
       project: '{{project}}'
       source:
-        chart: afrione
-        repoURL: https://afrioneltd.github.io/helm-charts/
+        chart: flip-ip
+        repoURL: https://daviinaa.github.io/helm-chart/
         targetRevision: 0.1.1
         helm:
           values: |-
             {{values}}
       destination:
-        name: afrione
+        name: gke_double-lore-410115_us-central1-c_new-flip
         namespace: '{{namespace}}'
       
       syncPolicy:
@@ -59,4 +59,3 @@ spec:
           kind: "*"
           managedFieldsManagers:
             - kube-controller-manager
-
