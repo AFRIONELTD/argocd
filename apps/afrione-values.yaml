@@ -1,11 +1,11 @@
-name: flip-app
-project: flip-ip
-namespace: flip
+name: siji-app
+project: siji-proj
+namespace: siji
 values: |-
-  fullnameOverride: flip-app
+  fullnameOverride: siji-app
   image: 
-    repository: daviinaa/flip-ip:app-36
-  namespace: flip
+    repository: 
+  namespace: siji
   containerPort: 3000
   managedidentity:
       enabled: true
