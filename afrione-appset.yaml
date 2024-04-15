@@ -18,7 +18,7 @@ spec:
       project: '{{project}}'
       source:
         chart: siji
-        repoURL: https://afrioneltd.github.io/helm-chart/
+        repoURL: https://afrioneltd.github.io/helm-chartk/
         targetRevision: 0.1.0
         helm:
           values: |-
