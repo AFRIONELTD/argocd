@@ -1,18 +1,19 @@
-name: siji-app
-project: siji-proj
-namespace: siji
+name: afrione-api-gateway
+project: afrione-api-project
+namespace: afrione-api
 values: |-
-  fullnameOverride: siji-app
+  fullnameOverride: afrione-api-gateway
   image: 
-    repository: sijibomi21/siji-image:app-7
-  namespace: siji
-  containerPort: 3000
+    repository: afrioneltd/api-gateway-service:app-3
+  namespace: afrione-api
+  containerPort: 3001
   managedidentity:
       enabled: true
   autoscaling:
       enabled: true
   ingress:
     enabled: true
+    host: 
   lProbe:
       enabled: false
   rProbe:
