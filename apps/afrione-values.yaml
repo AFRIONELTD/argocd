@@ -4,7 +4,7 @@ namespace: afrione-api
 values: |-
   fullnameOverride: afrione-api-gateway
   image: 
-    repository: afrioneltd/api-gateway-service:app-3
+    repository: afrioneltd/api-gateway-service:app-24
   namespace: afrione-api
   containerPort: 3001
   managedidentity:
