@@ -12,7 +12,7 @@ values: |-
       memory: 448Mi
       cpu: 0.5
     limits:
-      memory: 2Mi
+      memory: 2Gi
       cpu: 1
   lProbe:
     enabled: true
