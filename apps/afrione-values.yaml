@@ -6,15 +6,41 @@ values: |-
   image: 
     repository: afrioneltd/api-gateway-service:app-24
   namespace: afrione-api
-  containerPort: 3001
-  managedidentity:
-      enabled: true
-  autoscaling:
-      enabled: true
-  ingress:
-    enabled: true
-    host: 
-  lProbe:
-      enabled: false
-  rProbe:
-      enabled: false
+  containerPort: 8090
+resources:
+  requests:
+    memory: "448Mi"
+    cpu: "250m"
+  limits:
+    memory: "2000Mi"
+    cpu: "1000m"
+readinessProbe:
+  path: /
+  failureThreshold: 5
+  periodSeconds: 10
+  initialDelaySeconds: 60
+livenessProbe:
+  path: /
+  failureThreshold: 5
+  periodSeconds: 10
+  initialDelaySeconds: 60
+env:
+  - name: AUTHORIZATION_API_GATEWAY_SERVICE_HOST
+    value: http://authorization-api-gateway
+  - name: KUBERNETES_NAMESPACE
+    value: sandbox
+  - name: SPRING_PROFILES_ACTIVE
+    value: sandbox
+  - name: KAFKA_BROKERS_URL
+    valueFrom:
+      configMapKeyRef:
+        name: configs
+        key: KAFKA_HOST
+volumeMounts:
+  - name: config
+    mountPath: "/config"
+    readOnly: true
+volumes:
+  - name: config
+    configMap:
+      name: authorization-api-gateway
