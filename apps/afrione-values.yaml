@@ -9,10 +9,10 @@ values: |-
   containerPort: 8090
 resources:
   requests:
-    memory: 448
+    memory: 448Mi
     cpu: 0.5
   limits:
-    memory: 2
+    memory: 2Mi
     cpu: 1
 readinessProbe:
   path: /
