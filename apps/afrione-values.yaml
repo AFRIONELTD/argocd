@@ -14,12 +14,14 @@ resources:
   limits:
     memory: 2Mi
     cpu: 1
-readinessProbe:
+lProbe:
+  enabled: true
   path: /
   failureThreshold: 5
   periodSeconds: 10
   initialDelaySeconds: 60
-livenessProbe:
+rProbe:
+  enabled: true
   path: /
   failureThreshold: 5
   periodSeconds: 10
