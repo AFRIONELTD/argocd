@@ -15,13 +15,13 @@ values: |-
       memory: 2Gi
       cpu: 1
   lProbe:
-    enabled: true
+    enabled: false
     path: /
     failureThreshold: 5
     periodSeconds: 10
     initialDelaySeconds: 60
   rProbe:
-    enabled: true
+    enabled: false
     path: /
     failureThreshold: 5
     periodSeconds: 10
