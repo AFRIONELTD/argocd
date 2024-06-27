@@ -30,7 +30,7 @@ values: |-
     - name: AUTHORIZATION_API_GATEWAY_SERVICE_HOST
       value: http://authorization-api-gateway
     - name: KUBERNETES_NAMESPACE
-      value: sandbox
+      value: afrione-api
     - name: SPRING_PROFILES_ACTIVE
       value: sandbox
     - name: KAFKA_BROKERS_URL
