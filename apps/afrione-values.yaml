@@ -14,6 +14,10 @@ values: |-
     limits:
       memory: 2Gi
       cpu: 1
+  autoscaling:
+    enabled: true
+  ingress:
+    host: api-sandbox
   lProbe:
     enabled: false
     path: /
