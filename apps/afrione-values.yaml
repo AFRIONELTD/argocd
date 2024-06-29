@@ -30,6 +30,9 @@ values: |-
     failureThreshold: 5
     periodSeconds: 10
     initialDelaySeconds: 60
+  envFrom:
+    - secretRef:
+      name: api-gateway-service
   env:
     - name: AUTHORIZATION_API_GATEWAY_SERVICE_HOST
       value: http://api-gateway-service
