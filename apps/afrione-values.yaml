@@ -19,14 +19,14 @@ values: |-
   ingress:
     host: api-sandbox
   lProbe:
-    enabled: false
-    path: /
+    enabled: true
+    path: /actuator/health
     failureThreshold: 5
     periodSeconds: 10
     initialDelaySeconds: 60
   rProbe:
-    enabled: false
-    path: /
+    enabled: true
+    path: /actuator/health
     failureThreshold: 5
     periodSeconds: 10
     initialDelaySeconds: 60
