@@ -40,7 +40,7 @@ values: |-
     - name: KAFKA_BROKERS_URL
       valueFrom:
         configMapKeyRef:
-          name: authorization-api-gateway
+          name: configs
           key: KAFKA_HOST
   volumeMounts:
     - name: config
