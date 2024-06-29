@@ -32,9 +32,9 @@ values: |-
     initialDelaySeconds: 60
   env:
     - name: AUTHORIZATION_API_GATEWAY_SERVICE_HOST
-      value: http://authorization-api-gateway
+      value: http://api-gateway-service
     - name: KUBERNETES_NAMESPACE
-      value: afrione-api
+      value: sandbox
     - name: SPRING_PROFILES_ACTIVE
       value: sandbox
     - name: KAFKA_BROKERS_URL
