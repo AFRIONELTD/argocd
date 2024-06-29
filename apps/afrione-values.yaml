@@ -1,12 +1,12 @@
-name: afrione-api-gateway
+name: api-gateway-service
 project: afrione-api-project
-namespace: afrione-api
+namespace: sandbox
 values: |-
-  fullnameOverride: afrione-api-gateway
+  fullnameOverride: api-gateway-service
   image: 
     repository: afrioneltd/api-gateway-service:app-24
-  namespace: afrione-api
-  containerPort: 8090
+  namespace: sandbox
+  containerPort: 9001
   resources:
     requests:
       memory: 448Mi
@@ -49,4 +49,4 @@ values: |-
   volumes:
     - name: config
       configMap:
-        name: authorization-api-gateway
+        name: api-gateway-service
