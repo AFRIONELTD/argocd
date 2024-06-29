@@ -37,6 +37,10 @@ values: |-
       value: sandbox
     - name: SPRING_PROFILES_ACTIVE
       value: sandbox
+    - name: SPRING_CLOUD_KUBERNETES_CONFIG_NAME
+      value: api-gateway-service
+    - name: SPRING_CLOUD_KUBERNETES_CONFIG_NAMESPACE
+      value: sandbox
     - name: KAFKA_BROKERS_URL
       valueFrom:
         configMapKeyRef:
