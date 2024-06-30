@@ -51,7 +51,7 @@ values: |-
           key: KAFKA_HOST
   volumeMounts:
     - name: config
-      mountPath: "/config"
+      mountPath: "/afrione/config"
       readOnly: true
   volumes:
     - name: config
