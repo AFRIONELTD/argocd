@@ -9,7 +9,7 @@ values: |-
   containerPort: 9001
   resources:
     requests:
-      memory: 640Mi
+      memory: 1Gi
       cpu: 0.5
     limits:
       memory: 2Gi
