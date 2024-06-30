@@ -18,7 +18,7 @@ values: |-
     enabled: true
   ingress:
     host: api-sandbox
-  livenessProbe:
+  lProbe:
     enabled: true
     path: /actuator/health
     failureThreshold: 5
