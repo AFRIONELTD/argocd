@@ -7,13 +7,6 @@ values: |-
     repository: afrioneltd/api-gateway-service:app-37
   namespace: sandbox
   containerPort: 9001
-  resources:
-    requests:
-      memory: "1Gi"
-      cpu: "1000m"
-    limits:
-      memory: "2000Mi"
-      cpu: "1000m"
   autoscaling:
     enabled: true
   ingress:
