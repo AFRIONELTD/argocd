@@ -18,24 +18,15 @@ values: |-
     limits:
       memory: "2Gi"
       cpu: "1000m"
-  ports:
-  - name: liveness-port
-    containerPort: 9001
-  - name: readiness-port
-    containerPort: 9001
   lProbe:
     enabled: true
-    httpGet:
-      path: /actuator/health
-      port: liveness-port
+    path: /actuator/health
     failureThreshold: 5
     periodSeconds: 120
     initialDelaySeconds: 120
   rProbe:
     enabled: true
-    httpGet:
-      path: /actuator/health
-      port: readiness-port
+    path: /actuator/health
     failureThreshold: 5
     periodSeconds: 120
     initialDelaySeconds: 120
