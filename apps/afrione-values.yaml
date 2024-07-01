@@ -30,7 +30,7 @@ values: |-
       port: liveness-port
     failureThreshold: 5
     periodSeconds: 10
-    initialDelaySeconds: 60
+    initialDelaySeconds: 120
   rProbe:
     enabled: true
     httpGet:
