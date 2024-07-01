@@ -19,7 +19,7 @@ values: |-
       memory: "2Gi"
       cpu: "1000m"
   lProbe:
-    enabled: false
+    enabled: true
     path: /actuator/health
     failureThreshold: 5
     periodSeconds: 120
