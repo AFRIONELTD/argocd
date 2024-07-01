@@ -4,7 +4,7 @@ namespace: sandbox
 values: |-
   fullnameOverride: api-gateway-service
   image: 
-    repository: afrioneltd/api-gateway-service:app-35
+    repository: afrioneltd/api-gateway-service:app-36
   namespace: sandbox
   containerPort: 9001
   resources:
