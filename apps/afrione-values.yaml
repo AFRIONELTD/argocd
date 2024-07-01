@@ -4,7 +4,7 @@ namespace: sandbox
 values: |-
   fullnameOverride: api-gateway-service
   image: 
-    repository: afrioneltd/api-gateway-service:app-39
+    repository: afrioneltd/api-gateway-service:app-24
   namespace: sandbox
   containerPort: 9001
   autoscaling:
@@ -19,13 +19,13 @@ values: |-
       memory: "2Gi"
       cpu: "1000m"
   lProbe:
-    enabled: false
+    enabled: true
     path: /actuator/health
     failureThreshold: 5
     periodSeconds: 120
     initialDelaySeconds: 120
   rProbe:
-    enabled: false
+    enabled: true
     path: /actuator/health
     failureThreshold: 5
     periodSeconds: 120
