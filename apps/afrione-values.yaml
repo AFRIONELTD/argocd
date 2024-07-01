@@ -20,20 +20,22 @@ values: |-
     host: api-sandbox
   ports:
   - name: liveness-port
-    containerPort: 8090
+    containerPort: 9001
   - name: readiness-port
-    containerPort: 8090
+    containerPort: 9001
   lProbe:
     enabled: true
-    port: liveness-port
-    path: /actuator/health
+    httpGet:
+      path: /
+      port: liveness-port
     failureThreshold: 5
     periodSeconds: 10
     initialDelaySeconds: 60
   rProbe:
     enabled: true
-    port: readiness-port
-    path: /actuator/health
+    httpGet:
+      path: /
+      port: readiness-port
     failureThreshold: 5
     periodSeconds: 10
     initialDelaySeconds: 60
