@@ -8,7 +8,7 @@ values: |-
   namespace: sandbox
   containerPort: 9001
   autoscaling:
-    enabled: true
+    enabled: false
   ingress:
     host: api-sandbox
   resources:
@@ -19,7 +19,7 @@ values: |-
       memory: "2Gi"
       cpu: "1000m"
   lProbe:
-    enabled: true
+    enabled: false
     path: /actuator/health
     failureThreshold: 5
     periodSeconds: 120
