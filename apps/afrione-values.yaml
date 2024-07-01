@@ -18,14 +18,21 @@ values: |-
     enabled: true
   ingress:
     host: api-sandbox
+  ports:
+  - name: liveness-port
+    containerPort: 8090
+  - name: readiness-port
+    containerPort: 8090
   lProbe:
     enabled: true
+    port: liveness-port
     path: /actuator/health
     failureThreshold: 5
     periodSeconds: 10
     initialDelaySeconds: 60
   rProbe:
     enabled: true
+    port: readiness-port
     path: /actuator/health
     failureThreshold: 5
     periodSeconds: 10
