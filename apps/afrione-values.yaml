@@ -26,19 +26,19 @@ values: |-
   lProbe:
     enabled: true
     httpGet:
-      path: /
+      path: /actuator/health
       port: liveness-port
     failureThreshold: 5
-    periodSeconds: 10
+    periodSeconds: 120
     initialDelaySeconds: 120
   rProbe:
     enabled: true
     httpGet:
-      path: /
+      path: /actuator/health
       port: readiness-port
     failureThreshold: 5
-    periodSeconds: 10
-    initialDelaySeconds: 60
+    periodSeconds: 120
+    initialDelaySeconds: 120
   env:
     - name: AUTHORIZATION_API_GATEWAY_SERVICE_HOST
       value: http://api-gateway-service
