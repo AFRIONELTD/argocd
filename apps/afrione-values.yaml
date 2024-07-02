@@ -4,7 +4,7 @@ namespace: sandbox
 values: |-
   fullnameOverride: api-gateway-service
   image: 
-    repository: afrioneltd/deployment-test-service:latest
+    repository: afrioneltd/deployment-test-service:latest2
   namespace: sandbox
   containerPort: 8080
   autoscaling:
@@ -20,15 +20,15 @@ values: |-
       cpu: "1000m"
   lProbe:
     enabled: true
-    path: /
+    path: /actuator/health
     failureThreshold: 5
-    periodSeconds: 120
+    periodSeconds: 60
     initialDelaySeconds: 120
   rProbe:
     enabled: true
-    path: /
+    path: /actuator/health
     failureThreshold: 5
-    periodSeconds: 120
+    periodSeconds: 60
     initialDelaySeconds: 120
   env:
     - name: AUTHORIZATION_API_GATEWAY_SERVICE_HOST
