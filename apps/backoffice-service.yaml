@@ -1,0 +1,56 @@
+name: backoffice-service
+project: afrione-api-project
+namespace: sandbox
+values: |-
+  fullnameOverride: backoffice-service
+  image: 
+    repository: afrioneltd/backoffice-service:sandbox
+  namespace: sandbox
+  containerPort: 9006
+  autoscaling:
+    enabled: false
+  ingress:
+    host: api-sandbox
+  resources:
+    requests:
+      memory: "1Gi"
+      cpu: "500m"
+    limits:
+      memory: "2Gi"
+      cpu: "1000m"
+  lProbe:
+    enabled: true
+    path: /actuator/health
+    failureThreshold: 5
+    periodSeconds: 60
+    initialDelaySeconds: 120
+  rProbe:
+    enabled: true
+    path: /actuator/health
+    failureThreshold: 5
+    periodSeconds: 60
+    initialDelaySeconds: 120
+  env:
+    - name: BACKOFFICE_SERVICE_HOST
+      value: http://backoffice-service
+    - name: KUBERNETES_NAMESPACE
+      value: sandbox
+    - name: SPRING_PROFILES_ACTIVE
+      value: sandbox
+    - name: SPRING_CLOUD_KUBERNETES_CONFIG_NAME
+      value: backoffice-service
+    - name: SPRING_CLOUD_KUBERNETES_CONFIG_NAMESPACE
+      value: sandbox
+    - name: KAFKA_BROKERS_URL
+      valueFrom:
+        configMapKeyRef:
+          name: configs
+          key: KAFKA_HOST
+  volumeMounts:
+    - name: config
+      mountPath: "/afrione/config"
+      readOnly: true
+  volumes:
+    - name: config
+      configMap:
+        name: backoffice-service
