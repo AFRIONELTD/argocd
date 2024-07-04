@@ -41,6 +41,10 @@ values: |-
       value: api-gateway-service
     - name: SPRING_CLOUD_KUBERNETES_CONFIG_NAMESPACE
       value: sandbox
+    - name: SPRING_CLOUD_SKIPPER_SERVER_PLATFORM_KUBERNETES_ACCOUNTS_K8S_FABRIC8_USERNAME
+      value: ""
+    - name: SPRING_CLOUD_SKIPPER_SERVER_PLATFORM_KUBERNETES_ACCOUNTS_K8S_FABRIC8_PASSWORD
+      value: ""
     - name: KAFKA_BROKERS_URL
       valueFrom:
         configMapKeyRef:
