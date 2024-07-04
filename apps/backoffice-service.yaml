@@ -41,7 +41,14 @@ values: |-
       value: backoffice-service
     - name: SPRING_CLOUD_KUBERNETES_CONFIG_NAMESPACE
       value: sandbox
+    - name: KAFKA_GROUP_ID
+      value: afrione.service.backoffice
     - name: KAFKA_BROKERS_URL
+      valueFrom:
+        configMapKeyRef:
+          name: configs
+          key: KAFKA_HOST
+    - name: KAFKA_BOOTSTRAP_SERVERS
       valueFrom:
         configMapKeyRef:
           name: configs

@@ -22,13 +22,13 @@ values: |-
     enabled: true
     path: /actuator/health
     failureThreshold: 5
-    periodSeconds: 60
+    periodSeconds: 15
     initialDelaySeconds: 120
   rProbe:
     enabled: true
     path: /actuator/health
     failureThreshold: 5
-    periodSeconds: 60
+    periodSeconds: 15
     initialDelaySeconds: 120
   env:
     - name: ACCOUNT_SERVICE_HOST
