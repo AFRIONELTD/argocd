@@ -10,7 +10,7 @@ values: |-
   autoscaling:
     enabled: false
   ingress:
-    host: api-sandbox
+    host: backoffice-service
   resources:
     requests:
       memory: "1Gi"
