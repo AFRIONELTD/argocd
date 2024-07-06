@@ -6,7 +6,7 @@ values: |-
   image: 
     repository: afrioneltd/core-banking-service:sandbox
   namespace: sandbox
-  containerPort: 9003
+  containerPort: 9002
   autoscaling:
     enabled: false
   ingress:
