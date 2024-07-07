@@ -13,10 +13,10 @@ values: |-
     host: bills-service
   resources:
     requests:
-      memory: "1Gi"
-      cpu: "500m"
+      memory: "500Mi"
+      cpu: "250m"
     limits:
-      memory: "2Gi"
+      memory: "1500Mi"
       cpu: "1000m"
   lProbe:
     enabled: true
