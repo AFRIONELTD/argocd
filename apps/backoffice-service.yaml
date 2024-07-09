@@ -4,7 +4,7 @@ namespace: sandbox
 values: |-
   fullnameOverride: backoffice-service
   image: 
-    repository: afrioneltd/backoffice-service:app-7
+    repository: afrioneltd/backoffice-service:app-8
   namespace: sandbox
   containerPort: 9006
   autoscaling:
