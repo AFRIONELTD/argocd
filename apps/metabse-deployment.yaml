@@ -31,24 +31,35 @@ values: |-
     periodSeconds: 15
     initialDelaySeconds: 120
   env:
-    - name: MB_DB_TYPE
-      value: "postgres"
-    - name: MB_DB_DBNAME
-      value: "metabase"
     - name: MB_DB_PORT
       value: "5432"
+    - name: MB_DB_TYPE
+      valueFrom:
+        secretKeyRef:
+          name: metabase-secrets
+          key: MB_DB_TYPE
+    - name: MB_DB_DBNAME
+      valueFrom:
+        secretKeyRef:
+          name: metabase-secrets
+          key: MB_DB_DBNAME
+    - name: MB_DB_PORT
+      valueFrom:
+        secretKeyRef:
+          name: metabase-secrets
+          key: MB_DB_PORT
     - name: MB_DB_USER
       valueFrom:
         secretKeyRef:
-          name: database-secret
-          key: DB_USER
+          name: metabase-secrets
+          key: MB_DB_USER
     - name: MB_DB_PASS
       valueFrom:
         secretKeyRef:
-          name: database-secret
-          key: DB_PASS
+          name: metabase-secrets
+          key: MB_DB_PASS
     - name: MB_DB_HOST
       valueFrom:
         secretKeyRef:
-          name: database-secret
-          key: DB_HOST
+          name: metabase-secrets
+          key: MB_DB_HOST
