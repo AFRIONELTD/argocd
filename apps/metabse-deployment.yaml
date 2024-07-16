@@ -43,11 +43,6 @@ values: |-
         secretKeyRef:
           name: metabase-secrets
           key: MB_DB_DBNAME
-    - name: MB_DB_PORT
-      valueFrom:
-        secretKeyRef:
-          name: metabase-secrets
-          key: MB_DB_PORT
     - name: MB_DB_USER
       valueFrom:
         secretKeyRef:
