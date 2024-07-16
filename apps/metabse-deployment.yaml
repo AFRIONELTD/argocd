@@ -13,10 +13,10 @@ values: |-
     host: metabase
   resources:
     requests:
-      memory: "300Mi"
+      memory: "700Mi"
       cpu: "250m"
     limits:
-      memory: "500Mi"
+      memory: "1Gi"
       cpu: "500m"
   lProbe:
     enabled: false
