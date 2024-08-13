@@ -4,7 +4,7 @@ namespace: sandbox
 values: |-
   fullnameOverride: core-banking-service
   image: 
-    repository: afrioneltd/core-banking-service:app-39
+    repository: afrioneltd/core-banking-service:app-40
   namespace: sandbox
   containerPort: 9002
   autoscaling:
