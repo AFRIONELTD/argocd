@@ -4,7 +4,7 @@ namespace: sandbox
 values: |-
   fullnameOverride: core-banking-service
   image: 
-    repository: afrioneltd/core-banking-service:app-25
+    repository: afrioneltd/core-banking-service:app-44
   namespace: sandbox
   containerPort: 9002
   autoscaling:
@@ -13,10 +13,10 @@ values: |-
     host: core-banking-service
   resources:
     requests:
-      memory: "1Gi"
-      cpu: "500m"
+      memory: "500Mi"
+      cpu: "250m"
     limits:
-      memory: "2Gi"
+      memory: "1Gi"
       cpu: "1000m"
   lProbe:
     enabled: true
