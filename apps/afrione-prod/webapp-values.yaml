@@ -1,5 +1,5 @@
 name: afrione-webapp
-project: afrione-production-project
+project: afrione-api-project
 namespace: production
 values: |-
   fullnameOverride: afrione-webapp
