@@ -9,6 +9,8 @@ values: |-
   containerPort: 9004
   autoscaling:
     enabled: false
+  role:
+    enabled: true
   ingress:
     host: transaction-service
   resources:

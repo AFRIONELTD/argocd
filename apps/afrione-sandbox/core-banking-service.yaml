@@ -9,6 +9,8 @@ values: |-
   containerPort: 9002
   autoscaling:
     enabled: false
+  role:
+    enabled: true
   ingress:
     host: core-banking-service
   resources:

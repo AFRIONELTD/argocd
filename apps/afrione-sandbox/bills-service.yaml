@@ -9,6 +9,8 @@ values: |-
   containerPort: 9005
   autoscaling:
     enabled: false
+  role:
+    enabled: true
   ingress:
     host: bills-service
   resources:

@@ -9,6 +9,8 @@ values: |-
   containerPort: 9003
   autoscaling:
     enabled: false
+  role:
+    enabled: true
   ingress:
     host: account-service
   resources:
