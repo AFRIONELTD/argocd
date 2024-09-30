@@ -1,0 +1,79 @@
+name: api-gateway-service
+project: afrione-production-project
+namespace: production
+values: |-
+  fullnameOverride: api-gateway-service
+  image: 
+    repository: afrioneltd/api-gateway-service:prod-app-74
+  namespace: production
+  containerPort: 9001
+  autoscaling:
+    enabled: false
+  role:
+    enabled: true
+  ingress:
+    host: api
+  resources:
+    requests:
+      memory: "600Mi"
+      cpu: "200m"
+    limits:
+      memory: "1Gi"
+      cpu: "1000m"
+  lProbe:
+    enabled: true
+    path: /actuator/health
+    failureThreshold: 5
+    periodSeconds: 15
+    initialDelaySeconds: 120
+  rProbe:
+    enabled: true
+    path: /actuator/health
+    failureThreshold: 5
+    periodSeconds: 15
+    initialDelaySeconds: 120
+  env:
+    - name: AUTHORIZATION_API_GATEWAY_SERVICE_HOST
+      value: http://api-gateway-service
+    - name: KUBERNETES_NAMESPACE
+      value: production
+    - name: SPRING_PROFILES_ACTIVE
+      value: prod
+    - name: SPRING_CLOUD_KUBERNETES_CONFIG_NAME
+      value: api-gateway-service
+    - name: SPRING_CLOUD_KUBERNETES_CONFIG_NAMESPACE
+      value: production
+    - name: SPRING_CLOUD_SKIPPER_SERVER_PLATFORM_KUBERNETES_ACCOUNTS_K8S_FABRIC8_USERNAME
+      value: ""
+    - name: SPRING_CLOUD_SKIPPER_SERVER_PLATFORM_KUBERNETES_ACCOUNTS_K8S_FABRIC8_PASSWORD
+      value: ""
+    - name: DATABASE_NAME
+      value: authentication_db
+    - name: DATABASE_USERNAME
+      valueFrom:
+        configMapKeyRef:
+          name: configs
+          key: DATABASE_USERNAME
+    - name: DATABASE_PASSWORD
+      valueFrom:
+        configMapKeyRef:
+          name: configs
+          key: DATABASE_PASSWORD
+    - name: DATABASE_URL
+      valueFrom:
+        configMapKeyRef:
+          name: configs
+          key: DATABASE_URL
+    - name: KAFKA_BROKERS_URL
+      valueFrom:
+        configMapKeyRef:
+          name: configs
+          key: KAFKA_HOST
+  volumeMounts:
+    - name: config
+      mountPath: "/afrione/config"
+      readOnly: true
+  volumes:
+    - name: config
+      configMap:
+        name: api-gateway-service
