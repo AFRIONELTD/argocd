@@ -15,7 +15,7 @@ values: |-
     host: account-service
   resources:
     requests:
-      memory: "500Mi"
+      memory: "450Mi"
       cpu: "150m"
     limits:
       memory: "1500Mi"

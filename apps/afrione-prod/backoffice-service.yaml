@@ -15,7 +15,7 @@ values: |-
     host: backoffice-service
   resources:
     requests:
-      memory: "500Mi"
+      memory: "450Mi"
       cpu: "150m"
     limits:
       memory: "1Gi"
@@ -80,6 +80,16 @@ values: |-
         configMapKeyRef:
           name: configs
           key: IMAGEKIT_PUBLIC-KEY
+    - name: TOKEN_CLIENT_SECRET_KEY
+      valueFrom:
+        configMapKeyRef:
+          name: configs
+          key: TOKEN_CLIENT_SECRET_KEY
+    - name: TOKEN_MS_SECRET_KEY
+      valueFrom:
+        configMapKeyRef:
+          name: configs
+          key: TOKEN_MS_SECRET_KEY
   volumeMounts:
     - name: config
       mountPath: "/afrione/config"

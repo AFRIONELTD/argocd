@@ -15,7 +15,7 @@ values: |-
     host: api
   resources:
     requests:
-      memory: "600Mi"
+      memory: "450Mi"
       cpu: "200m"
     limits:
       memory: "1Gi"
