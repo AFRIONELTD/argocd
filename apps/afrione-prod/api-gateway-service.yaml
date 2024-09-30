@@ -4,7 +4,7 @@ namespace: production
 values: |-
   fullnameOverride: api-gateway-service
   image: 
-    repository: afrioneltd/api-gateway-service:prod-app-74
+    repository: afrioneltd/api-gateway-service:prod-app-1
   namespace: production
   containerPort: 9001
   autoscaling:
