@@ -13,6 +13,7 @@ values: |-
     enabled: true
   ingress:
     host: account-service
+    domain: afrione.co
   resources:
     requests:
       memory: "450Mi"
@@ -63,6 +64,26 @@ values: |-
         configMapKeyRef:
           name: configs
           key: KAFKA_HOST
+    - name: TOKEN_CLIENT_SECRET_KEY
+      valueFrom:
+        configMapKeyRef:
+          name: configs
+          key: TOKEN_CLIENT_SECRET_KEY
+    - name: TOKEN_MS_SECRET_KEY
+      valueFrom:
+        configMapKeyRef:
+          name: configs
+          key: TOKEN_MS_SECRET_KEY
+    - name: IMAGEKIT_PRIVATE_KEY
+      valueFrom:
+        configMapKeyRef:
+          name: configs
+          key: IMAGEKIT_PRIVATE-KEY
+    - name: IMAGEKIT_PUBLIC_KEY
+      valueFrom:
+        configMapKeyRef:
+          name: configs
+          key: IMAGEKIT_PUBLIC-KEY
   volumeMounts:
     - name: config
       mountPath: "/afrione/config"
