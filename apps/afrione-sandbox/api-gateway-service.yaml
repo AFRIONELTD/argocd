@@ -15,10 +15,10 @@ values: |-
     host: api-sandbox
   resources:
     requests:
-      memory: "1Gi"
-      cpu: "500m"
+      memory: "450Mi"
+      cpu: "150m"
     limits:
-      memory: "2Gi"
+      memory: "1Gi"
       cpu: "1000m"
   lProbe:
     enabled: true
