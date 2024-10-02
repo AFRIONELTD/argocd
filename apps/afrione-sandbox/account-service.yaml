@@ -4,7 +4,7 @@ namespace: sandbox
 values: |-
   fullnameOverride: account-service
   image: 
-    repository: afrioneltd/account-service:app-202
+    repository: afrioneltd/account-service:app-203
   namespace: sandbox
   containerPort: 9003
   autoscaling:
