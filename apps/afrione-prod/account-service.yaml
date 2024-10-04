@@ -4,7 +4,7 @@ namespace: production
 values: |-
   fullnameOverride: account-service
   image: 
-    repository: afrioneltd/account-service:prod-app-8
+    repository: afrioneltd/account-service:prod-app-9
   namespace: production
   containerPort: 9003
   autoscaling:
