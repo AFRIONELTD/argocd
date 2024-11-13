@@ -4,7 +4,7 @@ namespace: production
 values: |-
   fullnameOverride: transaction-service
   image: 
-    repository: afrioneltd/transaction-service:prod-app-20
+    repository: afrioneltd/transaction-service:prod-app-21
   namespace: production
   containerPort: 9004
   autoscaling:
