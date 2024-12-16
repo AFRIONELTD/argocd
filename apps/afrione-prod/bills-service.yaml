@@ -4,7 +4,7 @@ namespace: production
 values: |-
   fullnameOverride: bills-service
   image: 
-    repository: afrioneltd/bills-service:prod-app-23
+    repository: afrioneltd/bills-service:prod-app-24
   namespace: production
   containerPort: 9005
   autoscaling:
