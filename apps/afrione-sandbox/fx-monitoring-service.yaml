@@ -1,0 +1,68 @@
+name: fx-monitoring-service
+project: afrione-api-project
+namespace: sandbox
+values: |-
+  fullnameOverride: fx-monitoring-service
+  image: 
+    repository: afrioneltd/fx-monitoring-service:app-2
+  namespace: sandbox
+  containerPort: 7100
+  autoscaling:
+    enabled: false
+  role:
+    enabled: true
+  ingress:
+    host: fx-monitoring-service
+  resources:
+    requests:
+      memory: "500Mi"
+      cpu: "180m"
+    limits:
+      memory: "1500Mi"
+      cpu: "1000m"
+  lProbe:
+    enabled: true
+    path: /actuator/health
+    failureThreshold: 5
+    periodSeconds: 15
+    initialDelaySeconds: 120
+  rProbe:
+    enabled: true
+    path: /actuator/health
+    failureThreshold: 5
+    periodSeconds: 15
+    initialDelaySeconds: 120
+  env:
+    - name: ACCOUNT_SERVICE_HOST
+      value: http://account-service
+    - name: KUBERNETES_NAMESPACE
+      value: sandbox
+    - name: SPRING_PROFILES_ACTIVE
+      value: sandbox
+    - name: SPRING_CLOUD_KUBERNETES_CONFIG_NAME
+      value: account-service
+    - name: SPRING_CLOUD_KUBERNETES_CONFIG_NAMESPACE
+      value: sandbox
+    - name: DATABASE_USERNAME
+      valueFrom:
+        configMapKeyRef:
+          name: configs
+          key: DATABASE_USERNAME
+    - name: DATABASE_PASSWORD
+      valueFrom:
+        configMapKeyRef:
+          name: configs
+          key: DATABASE_PASSWORD
+    - name: DATABASE_URL
+      valueFrom:
+        configMapKeyRef:
+          name: configs
+          key: DATABASE_URL
+  volumeMounts:
+    - name: config
+      mountPath: "/srglimited/config"
+      readOnly: true
+  volumes:
+    - name: config
+      configMap:
+        name: fx-monitoring-service
