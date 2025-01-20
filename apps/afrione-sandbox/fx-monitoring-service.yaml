@@ -13,7 +13,7 @@ values: |-
     enabled: true
   ingress:
     host: fx-monitoring-service
-    domain: afrione.co
+    domain: ghanaforextrade.com
   resources:
     requests:
       memory: "500Mi"
