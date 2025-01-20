@@ -12,8 +12,8 @@ values: |-
   role:
     enabled: true
   ingress:
-    host: api-sandbox
-    domain: ghanaforextrade.com
+    host: fx-monitoring-service
+    domain: afrione.co
   resources:
     requests:
       memory: "500Mi"
