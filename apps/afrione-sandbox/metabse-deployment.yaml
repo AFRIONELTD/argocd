@@ -13,6 +13,7 @@ values: |-
     enabled: false
   ingress:
     host: metabase
+    domain: afrione.co
   resources:
     requests:
       memory: "1Gi"
