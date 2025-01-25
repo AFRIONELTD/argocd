@@ -34,15 +34,9 @@ values: |-
     periodSeconds: 15
     initialDelaySeconds: 120
   env:
-    - name: ACCOUNT_SERVICE_HOST
-      value: http://account-service
     - name: KUBERNETES_NAMESPACE
       value: sandbox
     - name: SPRING_PROFILES_ACTIVE
-      value: sandbox
-    - name: SPRING_CLOUD_KUBERNETES_CONFIG_NAME
-      value: account-service
-    - name: SPRING_CLOUD_KUBERNETES_CONFIG_NAMESPACE
       value: sandbox
     - name: DATABASE_USERNAME
       valueFrom:
