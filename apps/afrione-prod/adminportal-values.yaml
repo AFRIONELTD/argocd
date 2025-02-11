@@ -4,7 +4,7 @@ namespace: production
 values: |-
   fullnameOverride: afrione-adminportal
   image: 
-    repository: afrioneltd/afrione-admin-portal:prod-app-2
+    repository: afrioneltd/afrione-admin-portal:prod-app-3
   namespace: production
   containerPort: 3000
   autoscaling:
