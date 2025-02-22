@@ -4,7 +4,7 @@ namespace: sandbox
 values: |-
   fullnameOverride: bills-service
   image: 
-    repository: afrioneltd/bills-service:app-137
+    repository: afrioneltd/bills-service:app-138
   namespace: sandbox
   containerPort: 9005
   autoscaling:
