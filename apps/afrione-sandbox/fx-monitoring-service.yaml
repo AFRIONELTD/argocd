@@ -16,7 +16,7 @@ values: |-
     domain: ghanaforextrade.com
   resources:
     requests:
-      memory: "500Mi"
+      memory: "450Mi"
       cpu: "180m"
     limits:
       memory: "1500Mi"
