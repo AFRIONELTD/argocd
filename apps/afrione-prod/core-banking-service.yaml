@@ -4,7 +4,7 @@ namespace: production
 values: |-
   fullnameOverride: core-banking-service
   image: 
-    repository: afrioneltd/core-banking-service:prod-app-6
+    repository: afrioneltd/core-banking-service:prod-app-7
   namespace: production
   containerPort: 9002
   autoscaling:
