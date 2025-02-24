@@ -4,7 +4,7 @@ namespace: sandbox
 values: |-
   fullnameOverride: afrione-website
   image: 
-    repository: afrioneltd/afrione-website:app-8
+    repository: afrioneltd/afrione-website:app-9
   namespace: sandbox
   containerPort: 3000
   autoscaling:
