@@ -16,23 +16,44 @@ values: |-
     domain: afrione.co
   resources:
     requests:
-      memory: "500Mi"
-      cpu: "150m"
+      memory: "300Mi"
+      cpu: "100m"
     limits:
-      memory: "1500Mi"
-      cpu: "1000m"
+      memory: "1Gi"
+      cpu: "800m"
   lProbe:
     enabled: true
     path: /actuator/health
     failureThreshold: 5
     periodSeconds: 15
-    initialDelaySeconds: 120
+    initialDelaySeconds: 60
   rProbe:
     enabled: true
     path: /actuator/health
     failureThreshold: 5
     periodSeconds: 15
-    initialDelaySeconds: 120
+    initialDelaySeconds: 60
+  affinity:
+    nodeAffinity:
+      preferredDuringSchedulingIgnoredDuringExecution:
+      - weight: 1
+        preference:
+          matchExpressions:
+          - key: beta.kubernetes.io/instance-type
+            operator: In
+            values:
+            - t2.large
+    podAntiAffinity:
+      preferredDuringSchedulingIgnoredDuringExecution:
+      - weight: 100
+        podAffinityTerm:
+          labelSelector:
+            matchExpressions:
+            - key: app
+              operator: In
+              values:
+              - transaction-service
+          topologyKey: kubernetes.io/hostname
   env:
     - name: TRANSACTION_SERVICE_HOST
       value: http://transaction-service
