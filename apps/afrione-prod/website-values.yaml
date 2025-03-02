@@ -1,18 +1,18 @@
 name: afrione-website
-project: afrione-api-project
-namespace: sandbox
+project: afrione-production-project
+namespace: production
 values: |-
   fullnameOverride: afrione-website
   image: 
-    repository: afrioneltd/afrione-website:app-13
-  namespace: sandbox
+    repository: afrioneltd/afrione-website:prod-app-13
+  namespace: production
   containerPort: 3000
   autoscaling:
     enabled: false
   role:
     enabled: true
   ingress:
-    host: site
+    host: ""
     domain: afrione.co
   resources:
     requests:
