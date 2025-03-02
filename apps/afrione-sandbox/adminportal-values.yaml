@@ -19,8 +19,8 @@ values: |-
       memory: "64Mi"
       cpu: "50m"
     limits:
-      memory: "2Gi"
-      cpu: "1000m"
+      memory: "200Mi"
+      cpu: "100m"
   lProbe:
     enabled: false
     path: /
