@@ -12,7 +12,7 @@ values: |-
   role:
     enabled: true
   ingress:
-    host: 
+    host: ""
     domain: afrione.co
   resources:
     requests:
