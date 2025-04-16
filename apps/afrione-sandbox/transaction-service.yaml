@@ -4,7 +4,7 @@ namespace: sandbox
 values: |-
   fullnameOverride: transaction-service
   image: 
-    repository: afrioneltd/transaction-service:app-243
+    repository: afrioneltd/transaction-service:app-244
   namespace: sandbox
   containerPort: 9004
   autoscaling:
