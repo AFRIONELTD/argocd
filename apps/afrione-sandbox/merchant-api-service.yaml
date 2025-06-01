@@ -4,7 +4,7 @@ namespace: sandbox
 values: |-
   fullnameOverride: merchant-api-service
   image: 
-    repository: afrioneltd/merchant-api-service:app-8
+    repository: afrioneltd/merchant-api-service:app-9
   namespace: sandbox
   containerPort: 9101
   autoscaling:
