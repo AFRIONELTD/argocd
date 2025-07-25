@@ -4,7 +4,7 @@ namespace: production
 values: |-
   fullnameOverride: fx-reconn-website
   image: 
-    repository: afrioneltd/fx-reconn-website:prod-app-6
+    repository: afrioneltd/fx-reconn-website:prod-app-7
   namespace: production
   containerPort: 3000
   autoscaling:
