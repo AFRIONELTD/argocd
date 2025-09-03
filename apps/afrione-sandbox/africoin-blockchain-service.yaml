@@ -33,3 +33,73 @@ values: |-
     failureThreshold: 5
     periodSeconds: 5
     initialDelaySeconds: 10
+  env:
+    - name: NODE_ENV
+      value: development
+    - name: PORT
+      value: 3000
+    - name: ETHEREUM_NETWORK
+      value: sepolia
+    - name: TRON_NETWORK
+      value: shasta
+    - name: LOG_LEVEL
+      value: info
+    - name: RATE_LIMIT_WINDOW_MS
+      value: 900000
+    - name: RATE_LIMIT_MAX
+      value: 100
+    - name: BLOCKCYPHER_TOKEN
+      valueFrom:
+        configMapKeyRef:
+          name: africoin-blockchain-service
+          key: BLOCKCYPHER_TOKEN
+    - name: ALCHEMY_API_KEY
+      valueFrom:
+        configMapKeyRef:
+          name: africoin-blockchain-service
+          key: ALCHEMY_API_KEY
+    - name: TRONGRID_API_KEY
+      valueFrom:
+        configMapKeyRef:
+          name: africoin-blockchain-service
+          key: TRONGRID_API_KEY
+    - name: ETHERSCAN_API_KEY
+      valueFrom:
+        configMapKeyRef:
+          name: africoin-blockchain-service
+          key: ETHERSCAN_API_KEY
+    - name: JWT_SECRET
+      valueFrom:
+        configMapKeyRef:
+          name: africoin-blockchain-service
+          key: JWT_SECRET
+    - name: CONTRACT_ADDRESS_ETH
+      valueFrom:
+        configMapKeyRef:
+          name: africoin-blockchain-service
+          key: CONTRACT_ADDRESS_ETH
+    - name: CONTRACT_ADDRESS_TRON
+      valueFrom:
+        configMapKeyRef:
+          name: africoin-blockchain-service
+          key: CONTRACT_ADDRESS_TRON
+    - name: ETHEREUM_RPC_URL
+      valueFrom:
+        configMapKeyRef:
+          name: africoin-blockchain-service
+          key: ETHEREUM_RPC_URL
+    - name: TRON_RPC_URL
+      valueFrom:
+        configMapKeyRef:
+          name: africoin-blockchain-service
+          key: TRON_RPC_URL
+    - name: SEPOLIA_RPC_URL
+      valueFrom:
+        configMapKeyRef:
+          name: africoin-blockchain-service
+          key: SEPOLIA_RPC_URL
+    - name: JWT_SECRET
+      valueFrom:
+        configMapKeyRef:
+          name: africoin-blockchain-service
+          key: JWT_SECRET
