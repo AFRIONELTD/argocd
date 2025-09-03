@@ -4,7 +4,7 @@ namespace: sandbox
 values: |-
   fullnameOverride: africoin-blockchain-service
   image: 
-    repository: afrioneltd/africoin-blockchain-service:app-4
+    repository: afrioneltd/africoin-blockchain-service:app-3
   namespace: sandbox
   containerPort: 3000
   autoscaling:
