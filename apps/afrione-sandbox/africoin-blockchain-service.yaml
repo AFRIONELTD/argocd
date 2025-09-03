@@ -1,0 +1,40 @@
+name: africoin-blockchain-service
+project: afrione-api-project
+namespace: sandbox
+values: |-
+  fullnameOverride: africoin-blockchain-service
+  image: 
+    repository: afrioneltd/africoin-blockchain-service:app-13
+  namespace: sandbox
+  containerPort: 3000
+  autoscaling:
+    enabled: false
+  role:
+    enabled: true
+  ingress:
+    host: sandbox-blockchain-service
+    domain: useafri.com
+  resources:
+    requests:
+      memory: "64Mi"
+      cpu: "50m"
+    limits:
+      memory: "200Mi"
+      cpu: "300m"
+  lProbe:
+    enabled: true
+    path: /health
+    failureThreshold: 5
+    periodSeconds: 10
+    initialDelaySeconds: 60
+  rProbe:
+    enabled: true
+    path: /health
+    failureThreshold: 5
+    periodSeconds: 10
+    initialDelaySeconds: 60
+  env:
+    enabled: true
+    envFrom:
+      - configMapRef:
+          name: africoin-blockchain-service
