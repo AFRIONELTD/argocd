@@ -48,26 +48,6 @@ values: |-
       value: 900000
     - name: RATE_LIMIT_MAX
       value: 100
-    - name: BLOCKCYPHER_TOKEN
-      valueFrom:
-        configMapKeyRef:
-          name: africoin-blockchain-service
-          key: BLOCKCYPHER_TOKEN
-    - name: ALCHEMY_API_KEY
-      valueFrom:
-        configMapKeyRef:
-          name: africoin-blockchain-service
-          key: ALCHEMY_API_KEY
-    - name: TRONGRID_API_KEY
-      valueFrom:
-        configMapKeyRef:
-          name: africoin-blockchain-service
-          key: TRONGRID_API_KEY
-    - name: ETHERSCAN_API_KEY
-      valueFrom:
-        configMapKeyRef:
-          name: africoin-blockchain-service
-          key: ETHERSCAN_API_KEY
     - name: JWT_SECRET
       valueFrom:
         configMapKeyRef:
@@ -83,11 +63,6 @@ values: |-
         configMapKeyRef:
           name: africoin-blockchain-service
           key: CONTRACT_ADDRESS_TRON
-    - name: ETHEREUM_RPC_URL
-      valueFrom:
-        configMapKeyRef:
-          name: africoin-blockchain-service
-          key: ETHEREUM_RPC_URL
     - name: TRON_RPC_URL
       valueFrom:
         configMapKeyRef:
@@ -98,8 +73,18 @@ values: |-
         configMapKeyRef:
           name: africoin-blockchain-service
           key: SEPOLIA_RPC_URL
-    - name: JWT_SECRET
+    - name: COMPANY_ETH_PRIVATE_KEY
       valueFrom:
         configMapKeyRef:
           name: africoin-blockchain-service
-          key: JWT_SECRET
+          key: COMPANY_ETH_PRIVATE_KEY
+    - name: TRON_TESTNET_RPC_URL
+      valueFrom:
+        configMapKeyRef:
+          name: africoin-blockchain-service
+          key: TRON_TESTNET_RPC_URL
+    - name: COMPANY_TRON_PRIVATE_KEY
+      valueFrom:
+        configMapKeyRef:
+          name: africoin-blockchain-service
+          key: COMPANY_TRON_PRIVATE_KEY
