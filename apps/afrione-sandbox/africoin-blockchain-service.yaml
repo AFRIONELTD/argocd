@@ -13,7 +13,7 @@ values: |-
     enabled: true
   ingress:
     host: sandbox-blockchain-service
-    domain: useafri.com
+    domain: afrione.co
   resources:
     requests:
       memory: "64Mi"
