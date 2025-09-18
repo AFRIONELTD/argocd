@@ -4,7 +4,7 @@ namespace: sandbox
 values: |-
   fullnameOverride: fx-monitoring-service
   image: 
-    repository: afrioneltd/fx-monitoring-service:app-339
+    repository: afrioneltd/fx-monitoring-service:app-340
   namespace: sandbox
   containerPort: 7100
   autoscaling:
