@@ -35,7 +35,7 @@ values: |-
     initialDelaySeconds: 10
   env:
     - name: NODE_ENV
-      value: development
+      value: test
     - name: PORT
       value: 3000
     - name: ETHEREUM_NETWORK
@@ -88,3 +88,23 @@ values: |-
         configMapKeyRef:
           name: africoin-blockchain-service
           key: COMPANY_TRON_PRIVATE_KEY
+    - name: TRON_CHAIN_ID
+      valueFrom:
+        configMapKeyRef:
+          name: africoin-blockchain-service
+          key: TRON_CHAIN_ID
+    - name: Owner_PK
+      valueFrom:
+        configMapKeyRef:
+          name: africoin-blockchain-service
+          key: Owner_PK
+    - name: ETH_USD_PRICE
+      valueFrom:
+        configMapKeyRef:
+          name: africoin-blockchain-service
+          key: ETH_USD_PRICE
+    - name: TRX_USD_PRICE
+      valueFrom:
+        configMapKeyRef:
+          name: africoin-blockchain-service
+          key: TRX_USD_PRICE
