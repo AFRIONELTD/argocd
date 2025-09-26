@@ -93,6 +93,11 @@ values: |-
         configMapKeyRef:
           name: africoin-blockchain-service
           key: TRON_CHAIN_ID
+    - name: ETHERSCAN_API_KEY
+      valueFrom:
+        configMapKeyRef:
+          name: africoin-blockchain-service
+          key: ETHERSCAN_API_KEY
     - name: Owner_PK
       valueFrom:
         configMapKeyRef:
