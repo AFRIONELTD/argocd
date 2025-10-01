@@ -1,63 +1,63 @@
-name: api-gateway-service
-project: afrione-api-project
-namespace: sandbox
-values: |-
-  fullnameOverride: api-gateway-service
-  image: 
-    repository: afrioneltd/api-gateway-service:app-76
-  namespace: sandbox
-  containerPort: 9001
-  autoscaling:
-    enabled: false
-  role:
-    enabled: true
-  ingress:
-    host: api-sandbox
-    domain: afrione.co
-  resources:
-    requests:
-      memory: "500Mi"
-      cpu: "200m"
-    limits:
-      memory: "1Gi"
-      cpu: "1000m"
-  lProbe:
-    enabled: true
-    path: /actuator/health
-    failureThreshold: 5
-    periodSeconds: 15
-    initialDelaySeconds: 120
-  rProbe:
-    enabled: true
-    path: /actuator/health
-    failureThreshold: 5
-    periodSeconds: 15
-    initialDelaySeconds: 120
-  env:
-    - name: AUTHORIZATION_API_GATEWAY_SERVICE_HOST
-      value: http://api-gateway-service
-    - name: KUBERNETES_NAMESPACE
-      value: sandbox
-    - name: SPRING_PROFILES_ACTIVE
-      value: sandbox
-    - name: SPRING_CLOUD_KUBERNETES_CONFIG_NAME
-      value: api-gateway-service
-    - name: SPRING_CLOUD_KUBERNETES_CONFIG_NAMESPACE
-      value: sandbox
-    - name: SPRING_CLOUD_SKIPPER_SERVER_PLATFORM_KUBERNETES_ACCOUNTS_K8S_FABRIC8_USERNAME
-      value: ""
-    - name: SPRING_CLOUD_SKIPPER_SERVER_PLATFORM_KUBERNETES_ACCOUNTS_K8S_FABRIC8_PASSWORD
-      value: ""
-    - name: KAFKA_BROKERS_URL
-      valueFrom:
-        configMapKeyRef:
-          name: configs
-          key: KAFKA_HOST
-  volumeMounts:
-    - name: config
-      mountPath: "/afrione/config"
-      readOnly: true
-  volumes:
-    - name: config
-      configMap:
-        name: api-gateway-service
+#name: api-gateway-service
+#project: afrione-api-project
+#namespace: sandbox
+#values: |-
+#  fullnameOverride: api-gateway-service
+#  image:
+#    repository: afrioneltd/api-gateway-service:app-76
+#  namespace: sandbox
+#  containerPort: 9001
+#  autoscaling:
+#    enabled: false
+#  role:
+#    enabled: true
+#  ingress:
+#    host: api-sandbox
+#    domain: afrione.co
+#  resources:
+#    requests:
+#      memory: "500Mi"
+#      cpu: "200m"
+#    limits:
+#      memory: "1Gi"
+#      cpu: "1000m"
+#  lProbe:
+#    enabled: true
+#    path: /actuator/health
+#    failureThreshold: 5
+#    periodSeconds: 15
+#    initialDelaySeconds: 120
+#  rProbe:
+#    enabled: true
+#    path: /actuator/health
+#    failureThreshold: 5
+#    periodSeconds: 15
+#    initialDelaySeconds: 120
+#  env:
+#    - name: AUTHORIZATION_API_GATEWAY_SERVICE_HOST
+#      value: http://api-gateway-service
+#    - name: KUBERNETES_NAMESPACE
+#      value: sandbox
+#    - name: SPRING_PROFILES_ACTIVE
+#      value: sandbox
+#    - name: SPRING_CLOUD_KUBERNETES_CONFIG_NAME
+#      value: api-gateway-service
+#    - name: SPRING_CLOUD_KUBERNETES_CONFIG_NAMESPACE
+#      value: sandbox
+#    - name: SPRING_CLOUD_SKIPPER_SERVER_PLATFORM_KUBERNETES_ACCOUNTS_K8S_FABRIC8_USERNAME
+#      value: ""
+#    - name: SPRING_CLOUD_SKIPPER_SERVER_PLATFORM_KUBERNETES_ACCOUNTS_K8S_FABRIC8_PASSWORD
+#      value: ""
+#    - name: KAFKA_BROKERS_URL
+#      valueFrom:
+#        configMapKeyRef:
+#          name: configs
+#          key: KAFKA_HOST
+#  volumeMounts:
+#    - name: config
+#      mountPath: "/afrione/config"
+#      readOnly: true
+#  volumes:
+#    - name: config
+#      configMap:
+#        name: api-gateway-service
