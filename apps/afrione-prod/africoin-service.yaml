@@ -51,6 +51,16 @@ values: |-
         configMapKeyRef:
           name: configs
           key: DATABASE_URL
+    - name: AFRICOIN_ERC20_ADMIN_PRIVATE_KEY
+      valueFrom:
+        secretKeyRef:
+          name: africoin-blockchain-service
+          key: COMPANY_ETH_PRIVATE_KEY
+    - name: AFRICOIN_TRC20_ADMIN_PRIVATE_KEY
+      valueFrom:
+        secretKeyRef:
+          name: africoin-blockchain-service
+          key: COMPANY_TRON_PRIVATE_KEY
   volumeMounts:
     - name: config
       mountPath: "/africoin/config"
