@@ -68,11 +68,11 @@ values: |-
         configMapKeyRef:
           name: africoin-blockchain-service
           key: TRON_RPC_URL
-    - name: SEPOLIA_RPC_URL
+    - name: ETHEREUM_RPC_URL
       valueFrom:
         configMapKeyRef:
           name: africoin-blockchain-service
-          key: SEPOLIA_RPC_URL
+          key: ETHEREUM_RPC_URL
     - name: COMPANY_ETH_PRIVATE_KEY
       valueFrom:
         secretKeyRef:
