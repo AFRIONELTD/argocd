@@ -55,12 +55,12 @@ values: |-
       valueFrom:
         secretKeyRef:
           name: africoin-blockchain-service
-          key: COMPANY_ETH_PRIVATE_KEY
+          key: ADMIN_ETH_PRIVATE_KEY
     - name: AFRICOIN_TRC20_ADMIN_PRIVATE_KEY
       valueFrom:
         secretKeyRef:
           name: africoin-blockchain-service
-          key: COMPANY_TRON_PRIVATE_KEY
+          key: ADMIN_TRON_PRIVATE_KEY
   volumeMounts:
     - name: config
       mountPath: "/africoin/config"
