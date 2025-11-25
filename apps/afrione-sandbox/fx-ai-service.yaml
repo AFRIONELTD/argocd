@@ -40,6 +40,8 @@ values: |-
       value: XAC4sAlS8uvur92hZODjSfJrsraYN1liuwq6ajDi
     - name: KUBERNETES_NAMESPACE
       value: sandbox
+    - name: DB_HOST
+      value: afrione-api-gateway.cns2i8uuse8m.eu-west-2.rds.amazonaws.com
     - name: DB_NAME
       value: fxmonitoring_db
     - name: DB_PASS
@@ -52,8 +54,3 @@ values: |-
         configMapKeyRef:
           name: configs
           key: DATABASE_USERNAME
-    - name: DB_HOST
-      valueFrom:
-        configMapKeyRef:
-          name: configs
-          key: DATABASE_URL
