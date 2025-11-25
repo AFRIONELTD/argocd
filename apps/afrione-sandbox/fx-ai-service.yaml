@@ -1,10 +1,10 @@
-name: fx-service-ai
+name: fx-ai-service
 project: afrione-api-project
 namespace: sandbox
 values: |-
-  fullnameOverride: fx-service-ai
+  fullnameOverride: fx-ai-service
   image: 
-    repository: afrioneltd/fx-service-ai:app-24
+    repository: afrioneltd/fx-ai-service:app-24
   namespace: sandbox
   containerPort: 5000
   autoscaling:
