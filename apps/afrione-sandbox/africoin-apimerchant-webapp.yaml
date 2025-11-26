@@ -4,7 +4,7 @@ namespace: sandbox
 values: |-
   fullnameOverride: africoin-apimerchant-webapp
   image: 
-    repository: afrioneltd/africoin-apimerchant-webapp:app-26
+    repository: afrioneltd/africoin-apimerchant-webapp:app-27
   namespace: sandbox
   containerPort: 3000
   autoscaling:
