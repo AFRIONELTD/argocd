@@ -36,21 +36,35 @@ values: |-
   env:
     - name: LLM_PROVIDER
       value: Cohere
-    - name: COHERE_KEY
-      value: XAC4sAlS8uvur92hZODjSfJrsraYN1liuwq6ajDi
     - name: KUBERNETES_NAMESPACE
       value: sandbox
-    - name: DB_HOST
-      value: afrione-api-gateway.cns2i8uuse8m.eu-west-2.rds.amazonaws.com
-    - name: DB_NAME
-      value: fxmonitoring_db
     - name: DB_PASS
       valueFrom:
         configMapKeyRef:
           name: configs
           key: DATABASE_PASSWORD
+    - name: DB_NAME
+      valueFrom:
+        configMapKeyRef:
+          name: fx-ai-service
+          key: DB_NAME
+    - name: DB_HOST
+      valueFrom:
+        configMapKeyRef:
+          name: fx-ai-service
+          key: DB_HOST
     - name: DB_USER
       valueFrom:
         configMapKeyRef:
           name: configs
           key: DATABASE_USERNAME
+    - name: DEEPSEEK_API_KEY
+      valueFrom:
+        configMapKeyRef:
+          name: fx-ai-service
+          key: DEEPSEEK_API_KEY
+    - name: COHERE_KEY
+      valueFrom:
+        configMapKeyRef:
+          name: fx-ai-service
+          key: COHERE_KEY
