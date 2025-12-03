@@ -63,6 +63,11 @@ values: |-
         configMapKeyRef:
           name: fx-ai-service
           key: DEEPSEEK_API_KEY
+    - name: OPENAI_API_KEY
+      valueFrom:
+        configMapKeyRef:
+          name: fx-ai-service
+          key: OPENAI_API_KEY
     - name: COHERE_KEY
       valueFrom:
         configMapKeyRef:
