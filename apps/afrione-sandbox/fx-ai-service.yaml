@@ -4,7 +4,7 @@ namespace: sandbox
 values: |-
   fullnameOverride: fx-ai-service
   image: 
-    repository: afrioneltd/fx-ai-service:app-52
+    repository: afrioneltd/fx-ai-service:app-53
   namespace: sandbox
   containerPort: 5000
   autoscaling:
