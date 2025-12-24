@@ -4,7 +4,7 @@ namespace: sandbox
 values: |-
   fullnameOverride: africoin-merchant-service
   image:
-    repository: afrioneltd/africoin-merchant-service:app-53
+    repository: afrioneltd/africoin-merchant-service:app-54
   namespace: sandbox
   containerPort: 9101
   autoscaling:
