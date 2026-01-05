@@ -4,7 +4,7 @@ namespace: sandbox
 values: |-
   fullnameOverride: africoin-otc-webapp
   image: 
-    repository: afrioneltd/africoin-otc-webapp:app-40
+    repository: afrioneltd/africoin-otc-webapp:app-41
   namespace: sandbox
   containerPort: 3000
   autoscaling:
