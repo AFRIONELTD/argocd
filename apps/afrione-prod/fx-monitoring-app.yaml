@@ -4,7 +4,7 @@ namespace: production
 values: |-
   fullnameOverride: fx-monitoring-app
   image: 
-    repository: afrioneltd/fx-monitoring-app:prod-app-18
+    repository: afrioneltd/fx-monitoring-app:prod-app-19
   namespace: production
   containerPort: 3000
   autoscaling:
