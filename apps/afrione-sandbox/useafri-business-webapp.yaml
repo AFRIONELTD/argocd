@@ -4,7 +4,7 @@ namespace: sandbox
 values: |-
   fullnameOverride: useafri-business-webapp
   image: 
-    repository: afrioneltd/useafri-business-webapp:app-6
+    repository: afrioneltd/useafri-business-webapp:app-7
   namespace: sandbox
   containerPort: 3000
   autoscaling:
