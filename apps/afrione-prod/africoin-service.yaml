@@ -4,7 +4,7 @@ namespace: production
 values: |-
   fullnameOverride: africoin-service
   image:
-    repository: afrioneltd/africoin-service:prod-app-62
+    repository: afrioneltd/africoin-service:prod-app-63
   namespace: production
   containerPort: 8002
   autoscaling:
