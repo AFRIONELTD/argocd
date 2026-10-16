@@ -4,7 +4,7 @@ namespace: sandbox
 values: |-
   fullnameOverride: africoin-service
   image:
-    repository: afrioneltd/africoin-service:app-705
+    repository: afrioneltd/africoin-service:app-706
   namespace: sandbox
   containerPort: 8002
   autoscaling:
